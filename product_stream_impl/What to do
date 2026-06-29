@@ -1,0 +1,36 @@
+Need to implement AI in existing flow ??
+
+1. Semantic Product Search (Beyond Keyword Matching)
+
+Right now, if a user searches your database for "warm winter coat," but your product name is "Heavy Wool Parka," a standard SQL query won't find it.
+
+The AI Enhancement: You can use AI to generate embeddings (turning text into mathematical vectors) for your product descriptions.
+
+User Experience: Users can search using natural language like "I need something to wear to a rainy wedding," and the AI will mathematically find the closest matching products in your track_info.db.
+
+2. An AI Shopping Assistant (RAG)
+
+You can create a new endpoint (e.g., POST /chat) that acts as a customer service bot.
+
+The AI Enhancement: Using a technique called RAG (Retrieval-Augmented Generation), you fetch your list of products from SQLite and secretly feed it to the AI alongside the user's message.
+
+User Experience: A user types, "Do you have any running shoes under $50?" The AI reads your live database and replies naturally, "Yes! We have the 'Speedster Kicks' in stock for $45.99."
+
+3. Auto-Generating Product Data (For Admins)
+
+You can inject AI directly into the /add-product endpoint you just built to save data-entry time.
+
+The AI Enhancement: When you send a POST request with just a product name and price, your backend pauses, asks an AI API to write a compelling 3-sentence SEO desc and assign a category, and then saves the complete package to SQLite.
+
+User Experience: Your catalog stays highly detailed, professional, and categorized with almost zero manual typing.
+
+4. Smart "You Might Also Like" Recommendations
+
+Since you have a robust JWT authentication system, you know exactly who is logged in.
+
+The AI Enhancement: You can track what a user buys or clicks. You then ask the AI to analyze that specific user's history against your entire product table to find hidden patterns.
+
+User Experience: The user sees a highly personalized dashboard of products that feels tailored to their specific tastes, rather than just random popular items.
+
+
+Need to make use of AI -> Local Ollama

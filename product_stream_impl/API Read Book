@@ -1,0 +1,30 @@
+User Login 
+
+https://192.168.0.104:4443/login
+
+
+User Register
+
+https://192.168.0.104:4443/register
+
+
+Add Product 
+
+https://localhost:4444/add-product
+
+Stream of Data
+
+https://localhost:4443/stream
+
+Delete Product
+
+https://localhost:4443/delete-product/23
+
+Delete All Products
+
+https://localhost:4443/delete-all-products
+
+Update Product
+
+https://localhost:4443/update-product/7
+
